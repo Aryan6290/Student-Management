@@ -13,6 +13,7 @@ from main.serializers import StudentSerializer
 
 @api_view(['POST'])
 def addStudent(request):
+    print("here",request.data)
     student = StudentSerializer(data=request.data)
   
     # validating for already existing data
